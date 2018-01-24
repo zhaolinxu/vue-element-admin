@@ -111,7 +111,7 @@ export const asyncRouterMap = [
     name: 'charts',
     meta: {
       title: '技术支持',
-      icon: 'chart'
+      icon: 'kefu'
     },
     children: [
       { path: 'keyboard', component: _import('charts/keyboard'), name: 'keyboardChart', meta: { title: '量产问题', noCache: true }},
@@ -127,7 +127,7 @@ export const asyncRouterMap = [
     name: 'excel',
     meta: {
       title: '开发工具',
-      icon: 'excel'
+      icon: 'dev1'
     },
     children: [
       { path: 'export-excel', component: _import('excel/exportExcel'), name: 'exportExcel', meta: { title: '量产工具' }},
