@@ -110,51 +110,14 @@ export const asyncRouterMap = [
     redirect: 'noredirect',
     name: 'charts',
     meta: {
-      title: 'charts',
+      title: '技术支持',
       icon: 'chart'
     },
     children: [
-      { path: 'keyboard', component: _import('charts/keyboard'), name: 'keyboardChart', meta: { title: 'keyboardChart', noCache: true }},
-      { path: 'line', component: _import('charts/line'), name: 'lineChart', meta: { title: 'lineChart', noCache: true }},
-      { path: 'mixchart', component: _import('charts/mixChart'), name: 'mixChart', meta: { title: 'mixChart', noCache: true }}
+      { path: 'keyboard', component: _import('charts/keyboard'), name: 'keyboardChart', meta: { title: '量产问题', noCache: true }},
+      { path: 'line', component: _import('charts/line'), name: 'lineChart', meta: { title: '需求支持', noCache: true }},
+      { path: 'mixchart', component: _import('charts/mixChart'), name: 'mixChart', meta: { title: '技术咨询', noCache: true }}
     ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'form',
-    meta: {
-      title: 'form',
-      icon: 'form'
-    },
-    children: [
-      { path: 'create-form', component: _import('form/create'), name: 'createForm', meta: { title: 'createForm', icon: 'table' }},
-      { path: 'edit-form', component: _import('form/edit'), name: 'editForm', meta: { title: 'editForm', icon: 'table' }}
-    ]
-  },
-
-  {
-    path: '/error',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'errorPages',
-    meta: {
-      title: 'errorPages',
-      icon: '404'
-    },
-    children: [
-      { path: '401', component: _import('errorPage/401'), name: 'page401', meta: { title: 'page401', noCache: true }},
-      { path: '404', component: _import('errorPage/404'), name: 'page404', meta: { title: 'page404', noCache: true }}
-    ]
-  },
-
-  {
-    path: '/error-log',
-    component: Layout,
-    redirect: 'noredirect',
-    children: [{ path: 'log', component: _import('errorLog/index'), name: 'errorLog', meta: { title: 'errorLog', icon: 'bug' }}]
   },
 
   {
@@ -163,42 +126,41 @@ export const asyncRouterMap = [
     redirect: '/excel/export-excel',
     name: 'excel',
     meta: {
-      title: 'excel',
+      title: '开发工具',
       icon: 'excel'
     },
     children: [
-      { path: 'export-excel', component: _import('excel/exportExcel'), name: 'exportExcel', meta: { title: 'exportExcel' }},
-      { path: 'export-selected-excel', component: _import('excel/selectExcel'), name: 'selectExcel', meta: { title: 'selectExcel' }},
-      { path: 'upload-excel', component: _import('excel/uploadExcel'), name: 'uploadExcel', meta: { title: 'uploadExcel' }}
+      { path: 'export-excel', component: _import('excel/exportExcel'), name: 'exportExcel', meta: { title: '量产工具' }},
+      { path: 'export-selected-excel', component: _import('excel/selectExcel'), name: 'selectExcel', meta: { title: '测试工具' }},
+      { path: 'upload-excel', component: _import('excel/uploadExcel'), name: 'uploadExcel', meta: { title: '技术咨询' }}
     ]
   },
-
+  {
+    path: '/form',
+    component: Layout,
+    redirect: 'noredirect',
+    name: 'form',
+    meta: {
+      title: 'FAQ',
+      icon: 'faq'
+    },
+    children: [
+      { path: 'create-form', component: _import('form/create'), name: 'createForm', meta: { title: '账户问题' }},
+      { path: 'edit-form', component: _import('form/edit'), name: 'editForm', meta: { title: '技术支持' }},
+      { path: 'other-form', component: _import('form/other'), name: 'otherForm', meta: { title: '其他产品' }}
+    ]
+  },
   {
     path: '/zip',
     component: Layout,
     redirect: '/zip/download',
-    children: [{ path: 'download', component: _import('zip/index'), name: 'exportZip', meta: { title: 'exportZip', icon: 'zip' }}]
+    children: [{ path: 'download', component: _import('zip/index'), name: 'exportZip', meta: { title: '意见反馈', icon: 'feedback' }}]
   },
 
   {
     path: '/theme',
     component: Layout,
     redirect: 'noredirect',
-    children: [{ path: 'index', component: _import('theme/index'), name: 'theme', meta: { title: 'theme', icon: 'theme' }}]
-  },
-
-  {
-    path: '/clipboard',
-    component: Layout,
-    redirect: 'noredirect',
-    children: [{ path: 'index', component: _import('clipboard/index'), name: 'clipboardDemo', meta: { title: 'clipboardDemo', icon: 'clipboard' }}]
-  },
-
-  {
-    path: '/i18n',
-    component: Layout,
-    children: [{ path: 'index', component: _import('i18n-demo/index'), name: 'i18n', meta: { title: 'i18n', icon: 'international' }}]
-  },
-
-  { path: '*', redirect: '/404', hidden: true }
+    children: [{ path: 'index', component: _import('theme/index'), name: 'theme', meta: { title: '我的账户', icon: 'user1' }}]
+  }
 ]
