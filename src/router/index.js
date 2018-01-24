@@ -37,20 +37,20 @@ export const constantRouterMap = [
       path: 'dashboard',
       component: _import('dashboard/index'),
       name: 'dashboard',
-      meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
-    }]
-  },
-  {
-    path: '/documentation',
-    component: Layout,
-    redirect: '/documentation/index',
-    children: [{
-      path: 'index',
-      component: _import('documentation/index'),
-      name: 'documentation',
-      meta: { title: 'documentation', icon: 'documentation', noCache: true }
+      meta: { title: '我的工作台', icon: 'dashboard', noCache: true }
     }]
   }
+//  ,{
+//    path: '/documentation',
+//    component: Layout,
+//    redirect: '/documentation/index',
+//    children: [{
+//      path: 'index',
+//      component: _import('documentation/index'),
+//      name: 'documentation',
+//      meta: { title: 'documentation', icon: 'documentation', noCache: true }
+//    }]
+//  }
 ]
 
 export default new Router({
@@ -60,33 +60,33 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
-  {
-    path: '/permission',
-    component: Layout,
-    redirect: '/permission/index',
-    meta: { roles: ['admin'] }, // you can set roles in root nav
-    children: [{
-      path: 'index',
-      component: _import('permission/index'),
-      name: 'permission',
-      meta: {
-        title: 'permission',
-        icon: 'lock',
-        roles: ['admin'] // or you can only set roles in sub nav
-      }
-    }]
-  },
-
-  {
-    path: '/icon',
-    component: Layout,
-    children: [{
-      path: 'index',
-      component: _import('svg-icons/index'),
-      name: 'icons',
-      meta: { title: 'icons', icon: 'icon', noCache: true }
-    }]
-  },
+//  {
+//    path: '/permission',
+//    component: Layout,
+//    redirect: '/permission/index',
+//    meta: { roles: ['admin'] }, // you can set roles in root nav
+//    children: [{
+//      path: 'index',
+//      component: _import('permission/index'),
+//      name: 'permission',
+//      meta: {
+//        title: 'permission',
+//        icon: 'lock',
+//        roles: ['admin'] // or you can only set roles in sub nav
+//      }
+//    }]
+//  },
+//
+//  {
+//    path: '/icon',
+//    component: Layout,
+//    children: [{
+//      path: 'index',
+//      component: _import('svg-icons/index'),
+//      name: 'icons',
+//      meta: { title: 'icons', icon: 'icon', noCache: true }
+//    }]
+//  },
 
   {
     path: '/components',
@@ -94,21 +94,13 @@ export const asyncRouterMap = [
     redirect: 'noredirect',
     name: 'component-demo',
     meta: {
-      title: 'components',
+      title: '资源浏览器',
       icon: 'component'
     },
     children: [
-      { path: 'tinymce', component: _import('components-demo/tinymce'), name: 'tinymce-demo', meta: { title: 'tinymce' }},
-      { path: 'markdown', component: _import('components-demo/markdown'), name: 'markdown-demo', meta: { title: 'markdown' }},
-      { path: 'json-editor', component: _import('components-demo/jsonEditor'), name: 'jsonEditor-demo', meta: { title: 'jsonEditor' }},
-      { path: 'dnd-list', component: _import('components-demo/dndList'), name: 'dndList-demo', meta: { title: 'dndList' }},
-      { path: 'splitpane', component: _import('components-demo/splitpane'), name: 'splitpane-demo', meta: { title: 'splitPane' }},
-      { path: 'avatar-upload', component: _import('components-demo/avatarUpload'), name: 'avatarUpload-demo', meta: { title: 'avatarUpload' }},
-      { path: 'dropzone', component: _import('components-demo/dropzone'), name: 'dropzone-demo', meta: { title: 'dropzone' }},
-      { path: 'sticky', component: _import('components-demo/sticky'), name: 'sticky-demo', meta: { title: 'sticky' }},
-      { path: 'count-to', component: _import('components-demo/countTo'), name: 'countTo-demo', meta: { title: 'countTo' }},
-      { path: 'mixin', component: _import('components-demo/mixin'), name: 'componentMixin-demo', meta: { title: 'componentMixin' }},
-      { path: 'back-to-top', component: _import('components-demo/backToTop'), name: 'backToTop-demo', meta: { title: 'backToTop' }}
+      { path: 'tinymce', component: _import('components-demo/tinymce'), name: 'tinymce-demo', meta: { title: 'SDK' }},
+      { path: 'markdown', component: _import('components-demo/markdown'), name: 'markdown-demo', meta: { title: '补丁' }},
+      { path: 'json-editor', component: _import('components-demo/jsonEditor'), name: 'jsonEditor-demo', meta: { title: '文档' }}
     ]
   },
 
@@ -125,36 +117,6 @@ export const asyncRouterMap = [
       { path: 'keyboard', component: _import('charts/keyboard'), name: 'keyboardChart', meta: { title: 'keyboardChart', noCache: true }},
       { path: 'line', component: _import('charts/line'), name: 'lineChart', meta: { title: 'lineChart', noCache: true }},
       { path: 'mixchart', component: _import('charts/mixChart'), name: 'mixChart', meta: { title: 'mixChart', noCache: true }}
-    ]
-  },
-
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table/complex-table',
-    name: 'example',
-    meta: {
-      title: 'example',
-      icon: 'example'
-    },
-    children: [
-      {
-        path: '/example/table',
-        component: _import('example/table/index'),
-        redirect: '/example/table/complex-table',
-        name: 'Table',
-        meta: {
-          title: 'Table',
-          icon: 'table'
-        },
-        children: [
-          { path: 'dynamic-table', component: _import('example/table/dynamicTable/index'), name: 'dynamicTable', meta: { title: 'dynamicTable' }},
-          { path: 'drag-table', component: _import('example/table/dragTable'), name: 'dragTable', meta: { title: 'dragTable' }},
-          { path: 'inline-edit-table', component: _import('example/table/inlineEditTable'), name: 'inlineEditTable', meta: { title: 'inlineEditTable' }},
-          { path: 'complex-table', component: _import('example/table/complexTable'), name: 'complexTable', meta: { title: 'complexTable' }}
-        ]
-      },
-      { path: 'tab/index', icon: 'tab', component: _import('example/tab/index'), name: 'tab', meta: { title: 'tab' }}
     ]
   },
 
