@@ -2,8 +2,34 @@
 .navbar .right-menu {
   margin-right: 30px;
 }
+
 //我的工作台
-.dashboard-container .el-col{
-  margin-bottom:20px;}
-.dashboard-container .el-col .component-item{
-  min-height:150px;}
+.dashboard-container .el-col {
+  margin-bottom: 20px;
+}
+
+.dashboard-container .el-col .component-item {
+  min-height: 130px;
+}
+
+.dashboard-container .el-card__header .svg-icon {
+  margin-right: 5px;
+}
+
+.dashboard-container .el-card__header {
+  font-weight: bold;
+}
+
+ul.user-info {
+  list-style: none;
+  margin:0 auto;
+  padding: 0;
+}
+
+.see-more {
+  text-align: right;
+}
+
+.see-more .el-button--medium {
+
+}
