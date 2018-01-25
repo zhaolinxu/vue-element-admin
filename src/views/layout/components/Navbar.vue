@@ -38,7 +38,6 @@
           <!--</el-dropdown-item>-->
         <!--</el-dropdown-menu>-->
       <!--</el-dropdown>-->
-      <el-button type="info" @click="logout"><svg-icon icon-class="logout" /> 注销</el-button>
     </div>
   </el-menu>
 </template>

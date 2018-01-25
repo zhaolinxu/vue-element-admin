@@ -19,7 +19,7 @@ export default {
     },
     height: {
       type: String,
-      default: '300px'
+      default: '100px'
     }
   },
   data() {
@@ -56,7 +56,7 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+          data: ['Industries', 'Technology', 'Forex']
         },
         calculable: true,
         series: [
@@ -69,9 +69,7 @@ export default {
             data: [
               { value: 320, name: 'Industries' },
               { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+              { value: 149, name: 'Forex' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

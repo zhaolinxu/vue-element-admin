@@ -3,33 +3,77 @@
   margin-right: 30px;
 }
 
+#app .sidebar-container {
+  top: 50px;
+}
+
 //我的工作台
-.dashboard-container .el-col {
-  margin-bottom: 20px;
-}
+.dashboard-container {
+  .el-col {
+    margin-bottom: 20px;
+  }
+  .el-col .component-item {
+    line-height: 30px;
+    height: 100px;
+  }
 
-.dashboard-container .el-col .component-item {
-  min-height: 130px;
-}
+  .el-card__header .svg-icon {
+    margin-right: 5px;
+  }
 
-.dashboard-container .el-card__header .svg-icon {
-  margin-right: 5px;
-}
+  .el-card__header {
+    font-weight: bold;
+    padding: 15px;
+  }
+  .user-info {
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .component-item {
+      height: 310px;
+    }
+    .see-more {
+      margin-top: 50px
+    }
+  }
+  //下面三块
+  .box-bottom {
+    .component-item {
+      height: 150px;
+    }
+  }
+  .see-more {
+    text-align: right;
+    margin-top: 20px;
+  }
 
-.dashboard-container .el-card__header {
-  font-weight: bold;
-}
+  .see-more .el-button--medium {
 
-ul.user-info {
-  list-style: none;
-  margin:0 auto;
-  padding: 0;
-}
-
-.see-more {
-  text-align: right;
-}
-
-.see-more .el-button--medium {
-
+  }
+  .component-item .number {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 100px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .chart-wrapper {
+    margin-bottom: 0;
+  }
+  .chart {
+    .el-card__body {
+      padding: 0;
+    }
+    .component-item {
+      height: 140px;
+    }
+  }
+  .el-col .el-row:last-child .el-col {
+    margin-bottom: 0px;
+  }
 }
