@@ -151,10 +151,10 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/zip',
+    path: '/feedback',
     component: Layout,
-    redirect: '/zip/download',
-    children: [{ path: 'download', component: _import('zip/index'), name: 'exportZip', meta: { title: '意见反馈', icon: 'feedback' }}]
+    redirect: 'feedback',
+    children: [{ path: 'feedback', component: _import('feedback/index'), name: 'exportZip', meta: { title: '意见反馈', icon: 'feedback' }}]
   },
 
   {
