@@ -124,9 +124,9 @@
                 <span>活跃比例</span>
               </div>
               <div class="component-item">
-                <div class="chart-wrapper">
-                  <pie-chart></pie-chart>
-                </div>
+                <!--<div class="chart-wrapper">-->
+                  <!--<pie-chart></pie-chart>-->
+                <!--</div>-->
 
               </div>
             </el-card>

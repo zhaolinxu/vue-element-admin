@@ -4,7 +4,9 @@
 }
 
 #app .sidebar-container {
-  top: 50px;
+  margin-top: 50px;
+  height: calc(100% - 50px);
+  overflow: hidden;
 }
 
 .sub-navbar {
