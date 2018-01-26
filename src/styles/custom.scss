@@ -6,7 +6,10 @@
 #app .sidebar-container {
   top: 50px;
 }
-
+.logo{position: absolute;
+  left:10px;
+  height:35px;
+  top:7px;}
 //我的工作台
 .dashboard-container {
   .el-col {
