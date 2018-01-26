@@ -6,10 +6,35 @@
 #app .sidebar-container {
   top: 50px;
 }
-.logo{position: absolute;
-  left:10px;
-  height:35px;
-  top:7px;}
+
+.sub-navbar {
+  font-size: 14px;
+  line-height: 50px;
+  vertical-align: middle;
+  transition: none;
+  //background: linear-gradient(90deg, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 100%, rgba(21, 56, 124, 0) 100%);
+  //background: #2a58ad;
+  .logo {
+    position: absolute;
+    left: 10px;
+    height: 35px;
+    top: 7px;
+  }
+  .com-logo {
+    height: 30px;
+    vertical-align: middle;
+  }
+  .com-name {
+    margin: 0 15px;
+    font-weight:bold;
+    color: #fff;
+  }
+  .logout{
+    background: none;
+    border: none;
+  }
+}
+
 //我的工作台
 .dashboard-container {
   .el-col {
@@ -17,7 +42,7 @@
   }
   .el-col .component-item {
     line-height: 30px;
-    height: 100px;
+    height: 120px;
   }
 
   .el-card__header .svg-icon {
@@ -28,40 +53,48 @@
     font-weight: bold;
     padding: 15px;
   }
-  .user-info {
+  //项目
+  .el-card__body {
+    padding: 15px;
+    position: relative;
     ul {
       list-style: none;
       margin: 0 auto;
       padding: 0;
     }
     ul li {
-      margin-bottom: 10px;
-    }
-    .component-item {
-      height: 310px;
-    }
-    .see-more {
-      margin-top: 50px
+      line-height: 30px;
     }
   }
+  .user-info {
+    .component-item {
+      height: 340px;
+    }
+  }
+  .svg-icon.workman {
+    height: 9em;
+    width: auto;
+    left: 0px;
+    bottom: 30px;
+    position: absolute;
+  }
+
   //下面三块
   .box-bottom {
     .component-item {
-      height: 150px;
+      height: 160px;
     }
   }
+
   .see-more {
-    text-align: right;
-    margin-top: 20px;
-  }
-
-  .see-more .el-button--medium {
-
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
   }
   .component-item .number {
     vertical-align: middle;
     text-align: center;
-    line-height: 100px;
+    line-height: 120px;
     font-size: 60px;
     font-weight: bold;
   }
@@ -73,7 +106,7 @@
       padding: 0;
     }
     .component-item {
-      height: 140px;
+      height: 150px;
     }
   }
   .el-col .el-row:last-child .el-col {

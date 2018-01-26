@@ -1,7 +1,9 @@
 <template>
   <sticky className="sub-navbar">
-    <img class="logo" :src="logo" alt="logo">
-    <el-button type="info" @click="logout">
+    <img class="logo" :src="logo" alt="全志一号通">
+    <img class="com-logo" :src="logo" alt="">
+    <span class="com-name">xx科技有限公司</span>
+    <el-button type="info" @click="logout" class="logout">
       <svg-icon icon-class="logout"/>
       注销
     </el-button>

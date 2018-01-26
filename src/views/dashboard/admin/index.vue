@@ -34,7 +34,12 @@
                 <span>A3-6619项目(8)</span>
               </div>
               <div class="component-item">
-                11111
+                <ul>
+                  <li>项目1</li>
+                  <li>项目2</li>
+                  <li>项目3</li>
+                  <li>...</li>
+                </ul>
 
               </div>
             </el-card>
@@ -45,7 +50,12 @@
                 <span>A3-2201项目(9)</span>
               </div>
               <div class="component-item">
-                11111
+                <ul>
+                  <li>项目1</li>
+                  <li>项目2</li>
+                  <li>项目3</li>
+                  <li>...</li>
+                </ul>
 
               </div>
             </el-card>
@@ -86,8 +96,12 @@
                 <span>A3-6619项目(8)</span>
               </div>
               <div class="component-item">
-                11111
-
+                <ul>
+                  <li>项目1</li>
+                  <li>项目2</li>
+                  <li>项目3</li>
+                  <li>...</li>
+                </ul>
               </div>
             </el-card>
           </el-col>
@@ -202,12 +216,6 @@
       padding: 16px 16px 0;
       margin-bottom: 32px;
     }
-    .svg-icon.workman{
-      height:7em;
-      width:5em;
-      left:50px;
-      position: absolute;
 
-    }
   }
 </style>
