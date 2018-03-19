@@ -1,117 +1,184 @@
 //全局
 .navbar .right-menu {
-  margin-right: 30px;
+    margin-right: 30px;
 }
-
 #app .sidebar-container {
-  margin-top: 50px;
-  height: calc(100% - 50px);
-  overflow: hidden;
+    //  margin-top: 50px;
+    //  height: calc(100% - 50px);
+    //  overflow: hidden;
+    .logo {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
 }
-
+.main-container {
+    .el-menu--horizontal {
+        display: none;
+    }
+}
 .sub-navbar {
-  font-size: 14px;
-  line-height: 50px;
-  vertical-align: middle;
-  transition: none;
-  //background: linear-gradient(90deg, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 100%, rgba(21, 56, 124, 0) 100%);
-  //background: #2a58ad;
-  .logo {
-    position: absolute;
-    left: 10px;
-    height: 35px;
-    top: 7px;
-  }
-  .com-logo {
-    height: 30px;
+    font-size: 14px;
     vertical-align: middle;
-  }
-  .com-name {
-    margin: 0 15px;
-    font-weight:bold;
-    color: #fff;
-  }
-  .logout{
-    background: none;
-    border: none;
-  }
+    transition: none;
+    //background: linear-gradient(90deg, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 0%, rgba(21, 56, 124, 0) 100%, rgba(21, 56, 124, 0) 100%);
+    //background: #2a58ad;
+    background: #fff;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #d9e2e7;
+    width: 100%;
+    .topMenu {
+        display: inline-block;
+        .el-button {
+            margin-right: 10px;
+            padding: 0;
+            color: #1a202b;
+            position: relative;
+            height: 100px;
+            width: 80px;
+        }
+        .el-button.active {
+            color: #22aaeb;
+        }
+        .el-button.active::after,
+        .el-button:hover::after {
+            content: "";
+            height: 3px;
+            background: #22aaeb;
+            width: 70%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .com-logo {
+        height: 30px;
+        vertical-align: middle;
+    }
+    .com-name {
+        margin: 0 15px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .logout {
+        background: none;
+        border: none;
+    }
 }
-
+//左侧菜单
+.scroll-container {
+    background-color: #2a58ad!important;
+    a {
+        background: #2a58ad;
+    }
+}
+#app {
+    .el-menu-item {
+        color: #fff;
+    }
+     .el-menu-item:hover {
+            background: #23aaec !important;
+        }
+    .el-submenu {
+        color: #fff;
+        .el-menu-item {
+            color: #fff;
+            background: #2a58ad !important;
+        }
+       .el-menu-item:hover {
+            background: #23aaec !important;
+        }
+        .el-menu-item.is-active {
+            color: #fff;
+        }
+        .el-submenu__title {
+            color: #fff;
+            background: #2871c0;
+            i{
+                color: #fff;
+            }
+        }
+    }
+    .el-submenu>.el-submenu__title .el-submenu__icon-arrow{
+            transform: rotateZ(-90deg);
+    }
+    .el-submenu.is-opened>.el-submenu__title .el-submenu__icon-arrow{
+            transform: rotateZ(0deg);
+    }
+}
 //我的工作台
 .dashboard-container {
-  .el-col {
-    margin-bottom: 20px;
-  }
-  .el-col .component-item {
-    line-height: 30px;
-    height: 120px;
-  }
-
-  .el-card__header .svg-icon {
-    margin-right: 5px;
-  }
-
-  .el-card__header {
-    font-weight: bold;
-    padding: 15px;
-  }
-  //项目
-  .el-card__body {
-    padding: 15px;
-    position: relative;
-    ul {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
+    .el-col {
+        margin-bottom: 20px;
     }
-    ul li {
-      line-height: 30px;
+    .el-col .component-item {
+        line-height: 30px;
+        height: 120px;
     }
-  }
-  .user-info {
-    .component-item {
-      height: 340px;
+    .el-card__header .svg-icon {
+        margin-right: 5px;
     }
-  }
-  .svg-icon.workman {
-    height: 9em;
-    width: auto;
-    left: 0px;
-    bottom: 30px;
-    position: absolute;
-  }
-
-  //下面三块
-  .box-bottom {
-    .component-item {
-      height: 160px;
+    .el-card__header {
+        font-weight: bold;
+        padding: 15px;
     }
-  }
-
-  .see-more {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-  }
-  .component-item .number {
-    vertical-align: middle;
-    text-align: center;
-    line-height: 120px;
-    font-size: 60px;
-    font-weight: bold;
-  }
-  .chart-wrapper {
-    margin-bottom: 0;
-  }
-  .chart {
+    //项目
     .el-card__body {
-      padding: 0;
+        padding: 15px;
+        position: relative;
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+        ul li {
+            line-height: 30px;
+        }
     }
-    .component-item {
-      height: 150px;
+    .user-info {
+        .component-item {
+            height: 340px;
+        }
     }
-  }
-  .el-col .el-row:last-child .el-col {
-    margin-bottom: 0px;
-  }
+    .svg-icon.workman {
+        height: 9em;
+        width: auto;
+        left: 0px;
+        bottom: 30px;
+        position: absolute;
+    }
+    //下面三块
+    .box-bottom {
+        .component-item {
+            height: 160px;
+        }
+    }
+    .see-more {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    .component-item .number {
+        vertical-align: middle;
+        text-align: center;
+        line-height: 120px;
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .chart-wrapper {
+        margin-bottom: 0;
+    }
+    .chart {
+        .el-card__body {
+            padding: 0;
+        }
+        .component-item {
+            height: 150px;
+        }
+    }
+    .el-col .el-row:last-child .el-col {
+        margin-bottom: 0px;
+    }
 }

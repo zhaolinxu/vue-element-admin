@@ -6,7 +6,7 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import '@/styles/index.scss' // global css
-import '@/styles/custom.scss' // global css
+import '@/styles/custom.scss' // 自定义 css
 
 import App from './App'
 import router from './router'
