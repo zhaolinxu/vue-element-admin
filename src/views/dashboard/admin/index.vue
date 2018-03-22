@@ -210,9 +210,9 @@
 
 	</div>
 </template>
-<script :src="Jquery" type="text/javascript" charset="utf-8"></script>
+<!--<script :src="Jquery" type="text/javascript" charset="utf-8"></script>-->
 <script>
-	import Jquery from '@/assets/js/jquery.min.js'
+//	import Jquery from '@/assets/js/jquery.min.js'
 	import PieChart from './components/PieChart'
 	import slideImg from '@/assets/images/workshop/demo_l.jpg'
 	import newProduct from '@/assets/images/workshop/demo_r.jpg'

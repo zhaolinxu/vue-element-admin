@@ -18,6 +18,23 @@ body {
     }
 }
 
+.align-right {
+    text-align: right;
+}
+
+.el-button {
+    i {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .el-button--text {
+        color: #22aaeb;
+    }
+    .el-button--primary {
+        background: #22aaeb;
+    }
+}
+
 //tab
 .el-tabs__active-bar {
     display: none;
@@ -140,10 +157,13 @@ body {
 }
 
 //面包屑
-.el-breadcrumb__item {
-     &:last-child{
-        .el-breadcrumb__inner {
-            color: #22aaeb;
+.el-breadcrumb {
+    margin-bottom: 10px;
+    .el-breadcrumb__item {
+        &:last-child {
+            .el-breadcrumb__inner {
+                color: #22aaeb;
+            }
         }
     }
 }
@@ -151,12 +171,61 @@ body {
 //表格
 .el-table {
     border-radius: 5px;
+    table {
+        border: none;
+    }
     .el-table__header tr {
         background: #d9e2e7;
     }
-    th,td{
-    	padding-left: 20px;
+    th,
+    td {
+        padding-left: 20px;
     }
+    th.is-leaf {
+        border: none;
+    }
+    td {
+        border-top: 1px solid transparent;
+        border-bottom-color: #ebeef5;
+        &:first-child {
+            border-left: 1px solid transparent;
+        }
+        &:last-child {
+            border-right: 1px solid transparent;
+        }
+    }
+    tr:last-child {
+        &:hover {
+            td {
+                border-bottom: 1px solid #22aaeb;
+                z-index: 9;
+            }
+        }
+        td {
+            &:first-child {
+                border-radius: 0 0px 0px 5px;
+            }
+            &:last-child {
+                border-radius: 0 0px 5px 0;
+            }
+        }
+    }
+    tr:hover {
+        td {
+            border-top: 1px solid #22aaeb;
+            border-bottom-color: #22aaeb;
+            &:first-child {
+                border-left: 1px solid #22aaeb;
+            }
+            &:last-child {
+                border-right: 1px solid #22aaeb;
+            }
+        }
+    }
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background: #fff;
 }
 
 #app {

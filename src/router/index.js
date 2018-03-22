@@ -99,8 +99,8 @@ export const asyncRouterMap = [
     },
     children: [
       { path: 'tinymce', component: _import('components-demo/table1'), name: 'tinymce-demo', meta: { title: '企业认证' }},
-      { path: 'markdown', component: _import('components-demo/markdown'), name: 'markdown-demo', meta: { title: '产品认证' }},
-      { path: 'json-editor', component: _import('components-demo/jsonEditor'), name: 'jsonEditor-demo', meta: { title: '文档' }}
+      { path: 'markdown', component: _import('components-demo/table2'), name: 'markdown-demo', meta: { title: '产品认证' }},
+      { path: 'json-editor', component: _import('components-demo/table3'), name: 'jsonEditor-demo', meta: { title: '文档' }}
     ]
   },
 

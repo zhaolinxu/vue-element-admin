@@ -3,6 +3,7 @@
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item>工作台</el-breadcrumb-item>
 			<el-breadcrumb-item>用户管理</el-breadcrumb-item>
+			<el-breadcrumb-item>用户详情</el-breadcrumb-item>
 		</el-breadcrumb>
 
 		<el-row :gutter="20">
