@@ -37,7 +37,7 @@ export const constantRouterMap = [
       path: 'dashboard',
       component: _import('dashboard/index'),
       name: 'dashboard',
-      meta: { title: '我的工作台', icon: 'dashboard', noCache: true }
+      meta: { title: '概览', icon: 'dashboard', noCache: true }
     }]
   }
 //  ,{
@@ -94,12 +94,12 @@ export const asyncRouterMap = [
     redirect: 'noredirect',
     name: 'component-demo',
     meta: {
-      title: '资源浏览器',
+      title: '资质申请',
       icon: 'component'
     },
     children: [
-      { path: 'tinymce', component: _import('components-demo/tinymce'), name: 'tinymce-demo', meta: { title: 'SDK' }},
-      { path: 'markdown', component: _import('components-demo/markdown'), name: 'markdown-demo', meta: { title: '补丁' }},
+      { path: 'tinymce', component: _import('components-demo/table1'), name: 'tinymce-demo', meta: { title: '企业认证' }},
+      { path: 'markdown', component: _import('components-demo/markdown'), name: 'markdown-demo', meta: { title: '产品认证' }},
       { path: 'json-editor', component: _import('components-demo/jsonEditor'), name: 'jsonEditor-demo', meta: { title: '文档' }}
     ]
   },
@@ -110,7 +110,7 @@ export const asyncRouterMap = [
     redirect: 'noredirect',
     name: 'charts',
     meta: {
-      title: '技术支持',
+      title: '用户管理',
       icon: 'kefu'
     },
     children: [
@@ -126,7 +126,7 @@ export const asyncRouterMap = [
     redirect: '/excel/export-excel',
     name: 'excel',
     meta: {
-      title: '开发工具',
+      title: '个人中心',
       icon: 'dev1'
     },
     children: [
@@ -134,33 +134,34 @@ export const asyncRouterMap = [
       { path: 'export-selected-excel', component: _import('excel/selectExcel'), name: 'selectExcel', meta: { title: '测试工具' }},
       { path: 'upload-excel', component: _import('excel/uploadExcel'), name: 'uploadExcel', meta: { title: '技术咨询' }}
     ]
-  },
-  {
-    path: '/form',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'form',
-    meta: {
-      title: 'FAQ',
-      icon: 'faq'
-    },
-    children: [
-      { path: 'create-form', component: _import('form/create'), name: 'createForm', meta: { title: '账户问题' }},
-      { path: 'edit-form', component: _import('form/edit'), name: 'editForm', meta: { title: '技术支持' }},
-      { path: 'other-form', component: _import('form/other'), name: 'otherForm', meta: { title: '其他产品' }}
-    ]
-  },
-  {
-    path: '/feedback',
-    component: Layout,
-    redirect: 'feedback',
-    children: [{ path: 'feedback', component: _import('feedback/index'), name: 'exportZip', meta: { title: '意见反馈', icon: 'feedback' }}]
-  },
-
-  {
-    path: '/theme',
-    component: Layout,
-    redirect: 'noredirect',
-    children: [{ path: 'index', component: _import('theme/index'), name: 'theme', meta: { title: '我的账户', icon: 'user1' }}]
   }
+//    ,
+//  {
+//    path: '/form',
+//    component: Layout,
+//    redirect: 'noredirect',
+//    name: 'form',
+//    meta: {
+//      title: 'FAQ',
+//      icon: 'faq'
+//    },
+//    children: [
+//      { path: 'create-form', component: _import('form/create'), name: 'createForm', meta: { title: '账户问题' }},
+//      { path: 'edit-form', component: _import('form/edit'), name: 'editForm', meta: { title: '技术支持' }},
+//      { path: 'other-form', component: _import('form/other'), name: 'otherForm', meta: { title: '其他产品' }}
+//    ]
+//  },
+//  {
+//    path: '/feedback',
+//    component: Layout,
+//    redirect: 'feedback',
+//    children: [{ path: 'feedback', component: _import('feedback/index'), name: 'exportZip', meta: { title: '意见反馈', icon: 'feedback' }}]
+//  },
+//
+//  {
+//    path: '/theme',
+//    component: Layout,
+//    redirect: 'noredirect',
+//    children: [{ path: 'index', component: _import('theme/index'), name: 'theme', meta: { title: '我的账户', icon: 'user1' }}]
+//  }
 ]
