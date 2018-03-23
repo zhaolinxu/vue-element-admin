@@ -1,7 +1,13 @@
 <template>
 	<div class="login-container" :style="bg">
 		<div class="login-left">
-<img class="logo" :src="LoginLogo" alt="全志一号通">
+			<img class="login-logo" :src="LoginLogo" alt="全志一号通">
+			<h3><div></div>全志开发服务平台</h3>
+			<ul>
+				<li>企业认证、填写资料、上传资料</li>
+				<li>产品认证</li>
+				<li>文档、资料、开发工具下载，并提供技术支持</li>
+			</ul>
 		</div>
 		<el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
 			<div class="title-container">
@@ -133,6 +139,8 @@
 		},
 		destroyed() {
 			// window.removeEventListener('hashchange', this.afterQRScan)
+		},goReg(){
+			this.$router.push({ path: '/' })
 		}
 	}
 </script>

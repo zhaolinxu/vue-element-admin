@@ -76,7 +76,8 @@ export default {
       },
       sortable: null,
       oldList: [],
-      newList: []
+      newList: [],
+      value1: null,
     }
   },
   filters: {

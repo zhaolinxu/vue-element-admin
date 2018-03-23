@@ -104,7 +104,7 @@
 		</el-row>
 		<el-row :gutter="20">
 			<el-col :span="16">
-				<el-carousel trigger="click" class="imgSlide" height="180px">
+				<el-carousel trigger="click" class="imgSlide" height="220px">
 					<el-carousel-item v-for="item in 4" :key="item">
 						<img :src="slideImg" alt="全志一号通">
 					</el-carousel-item>
