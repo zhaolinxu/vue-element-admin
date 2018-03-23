@@ -53,10 +53,10 @@ export default {
     theme: '换肤'
   },
   login: {
-    title: '系统登录',
+    title: '全志客户服务',
     logIn: '登录',
-    username: '账号',
-    password: '密码',
+    username: '用户名',
+    password: '登录密码',
     any: '随便填',
     thirdparty: '第三方登录',
     thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！'

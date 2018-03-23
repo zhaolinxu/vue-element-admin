@@ -12,21 +12,26 @@
 			<el-button type="text">技术支持</el-button>
 			<el-button type="text">统计分析</el-button>
 		</div>
+		<el-dropdown trigger="click" class='international lang-global' @command="handleSetLanguage" :icon="el-icon-arrow-down">
+			<div>
+				<svg-icon class-name='international-icon' icon-class="language" />
+			</div>
+			<el-dropdown-menu slot="dropdown" class="lang-menu">
+				<el-dropdown-item command="zh" :disabled="language==='zh'">中文</el-dropdown-item>
+				<el-dropdown-item command="en" :disabled="language==='en'">English</el-dropdown-item>
+			</el-dropdown-menu>
+		</el-dropdown>
 		<el-badge :value="5" class="notify">
 			<i class="el-icon-bell"></i>
 		</el-badge>
-		<el-dropdown class="avatar-container right-menu-item profile" trigger="click">
+		<el-dropdown @command="handleCommand" class="avatar-container right-menu-item profile" trigger="click">
 			<div class="avatar-wrapper">
-				<img class="user-avatar" :src="Faceman">
-				Mark Elliot Zuckerberg<i class="el-icon-arrow-down el-icon--right"></i>
+				<img class="user-avatar" :src="Faceman"> Mark Elliot Zuckerberg<i class="el-icon-arrow-down el-icon--right"></i>
 			</div>
 			<el-dropdown-menu slot="dropdown">
 				<el-dropdown-item>个人资料</el-dropdown-item>
-				<el-dropdown-item divided>退出</el-dropdown-item>
+				<el-dropdown-item divided command="1">{{$t('navbar.logOut')}}</el-dropdown-item>
 			</el-dropdown-menu>
-		</el-dropdown>
-  </span>
-
 		</el-dropdown>
 	</sticky>
 
@@ -58,13 +63,28 @@
 					}
 				}
 			}
-		},
+		},computed: {
+    language() {
+      return this.$store.getters.language
+    }
+  },
 		methods: {
-			logout() {
-				this.$store.dispatch('LogOut').then(() => {
-					location.reload() // In order to re-instantiate the vue-router object to avoid bugs
-				})
-			}
+			handleCommand(command) {
+				//this.$message('click on item ' + command);
+				if(command == 1) {
+					this.$store.dispatch('LogOut').then(() => {
+						location.reload() // In order to re-instantiate the vue-router object to avoid bugs
+					})
+				}
+			},
+			 handleSetLanguage(lang) {
+      this.$i18n.locale = lang
+      this.$store.dispatch('setLanguage', lang)
+      this.$message({
+        message: 'switch language success',
+        type: 'success'
+      })
+    }
 		}
 	}
 </script>
